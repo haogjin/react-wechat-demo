@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import 'font-awesome/less/font-awesome.less';
+import 'react-fontawesome';
+import 'antd-mobile/dist/antd-mobile.css'; 
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
