@@ -1,4 +1,4 @@
-'use strict';
+
 
 const errorOverlayMiddleware = require('react-dev-utils/errorOverlayMiddleware');
 const evalSourceMapMiddleware = require('react-dev-utils/evalSourceMapMiddleware');
@@ -9,6 +9,7 @@ const fs = require('fs');
 
 const protocol = process.env.HTTPS === 'true' ? 'https' : 'http';
 const host = process.env.HOST || '0.0.0.0';
+const proxyObj = require('../dev-server.config.js')
 
 module.exports = function(proxy, allowedHost) {
   return {
@@ -81,7 +82,10 @@ module.exports = function(proxy, allowedHost) {
       disableDotRule: true,
     },
     public: allowedHost,
-    proxy,
+    // proxy,
+    proxy: {
+      ...proxyObj,
+    },
     before(app, server) {
       if (fs.existsSync(paths.proxySetup)) {
         // This registers user provided middleware for proxy reasons

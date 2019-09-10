@@ -7,7 +7,7 @@ import Login from './pages/login'
 
 function App() {
   return (
-    <div className="App">
+    <div>
       {/* <Home></Home> */}
       <Switch>
         <Route path='/login' component={Login}/>
