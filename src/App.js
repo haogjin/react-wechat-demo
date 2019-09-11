@@ -8,11 +8,10 @@ import Login from './pages/login'
 function App() {
   return (
     <div>
-      {/* <Home></Home> */}
-      <Switch>
-        <Route path='/login' component={Login}/>
-        <PrivateRoute path='/' component={PageRoutes}/>
-      </Switch>
+        {/* <Switch> */}
+          <Route path='/login' component={Login}/>
+          <PrivateRoute path='/' component={PageRoutes}/>
+        {/* </Switch> */}
     </div>
   );
 }

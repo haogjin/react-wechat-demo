@@ -42,6 +42,8 @@ import API from '../../service/api/user'
   }
 
   render() {
+    //dispatch(login(params))
+    console.log(this.props.login)
     const { getFieldProps, getFieldError } = this.props.form
     const initialAccount = ''
     const initialPassword = ''
