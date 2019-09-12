@@ -4,12 +4,13 @@ import {
 
 
 const INITIAL_STATE = {
-  loginInfo: {},
+  loginInfo: {}
 }
 
 
 
-export default function user (state = INITIAL_STATE, action) {
+export default (state = INITIAL_STATE, action) => {
+  console.log(state)
   switch (action.type) {
     case LOGIN: {
       return {

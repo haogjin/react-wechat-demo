@@ -15,7 +15,7 @@ class User {
    */
   login (param) {
     const url = URL.login
-    return axios.post(url, param)
+    return axios.post(url, {...param, loginType: 'json'})
   }
 
   logout () {

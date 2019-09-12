@@ -47,8 +47,6 @@ const servers = [
 ]
 
 const proxyObj = servers.reduce((proxyObj, item) => {
-  console.log(11)
-  console.log(proxyObj)
   proxyObj[item.name] = {
     target: item.target || 'http://192.168.11.198:30005', // http://seedtest.ap88.com
     changeOrigin: true,

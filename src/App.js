@@ -1,4 +1,5 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import {Route, Switch} from 'react-router-dom'
 import PrivateRoute from './routes/privateRoute.js'
 import PageRoutes from './routes/index.js'
@@ -8,12 +9,12 @@ import Login from './pages/login'
 function App() {
   return (
     <div>
-        {/* <Switch> */}
+        <Switch>
           <Route path='/login' component={Login}/>
           <PrivateRoute path='/' component={PageRoutes}/>
-        {/* </Switch> */}
+        </Switch>
     </div>
   );
 }
 
-export default App;
+export default connect()(App);

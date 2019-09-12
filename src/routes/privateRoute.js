@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import { Route, Redirect } from 'react-router-dom'
 // import { isAuthenticated } from '../../utils/Session'
+import Cookie from 'js-cookie'
 
 /**
  * 两种写法都可以
@@ -21,7 +22,7 @@ class PrivateRoute extends Component {
 
   render() {
       // 分离this.props成component和其他
-      const isAuthenticated = true
+      const isAuthenticated = !!Cookie.get('tokenInfo')
 
       console.log(isAuthenticated)
       console.log(this.props)

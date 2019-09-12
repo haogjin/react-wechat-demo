@@ -9,11 +9,11 @@ import 'antd-mobile/dist/antd-mobile.css';
 import {BrowserRouter} from 'react-router-dom'
 import configStore from './store'
 import { Provider } from 'react-redux'
-import { login } from './store/actions/user'
-
+// import { login } from './store/actions/user'
 const store = configStore()
-console.log(store.dispatch(login))
-store.dispatch(login)
+// console.log(store.dispatch(login))
+// let param ={username:'zhaolei',password:'123456a',loginType:'json'}
+// store.dispatch(login(param))()
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>

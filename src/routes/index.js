@@ -1,5 +1,5 @@
 import React from 'react'
-import { withRouter, Switch } from 'react-router-dom'
+import { withRouter, Switch, Redirect } from 'react-router-dom'
 
 import PrivateRoute from './privateRoute.js'
 
@@ -17,15 +17,16 @@ withRouter:
 2、导出的时候：export default withRouter(App);  //这里要执行一下WithRouter
 */
 @withRouter
-class pageRoutes extends React.Component {
+class PageRoutes extends React.Component {
   render(){
     return (
       <Switch>
-        <PrivateRoute exact path='/home' component={Home}/>
+        <PrivateRoute  path='/home' component={Home}/>
         <PrivateRoute exact path='/wechat' component={Wechat}/>
+        <Redirect exact from='/' to='/home'/>
       </Switch>
     ) 
   }
 }
 
-export default pageRoutes
+export default PageRoutes

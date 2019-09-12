@@ -69,6 +69,7 @@ $http.interceptors.response.use(
     const res = response.data
     if (res.succeed !== true) {
       Toast.fail(res.errorMsg, 5)
+      console.log(222)
 
       // 6000001,session超时
       if (res.errorCode === '600401') {
