@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import 'font-awesome/less/font-awesome.less';
-import 'react-fontawesome';
+import 'font-awesome/css/font-awesome.min.css';
 import 'antd-mobile/dist/antd-mobile.css'; 
 import {BrowserRouter} from 'react-router-dom'
 import configStore from './store'

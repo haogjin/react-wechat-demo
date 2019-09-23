@@ -83,7 +83,9 @@ import { Redirect } from 'react-router-dom';
     const initialPassword = ''
     return (
       <div className="login">
-        { this.props.loginInfo.tokenInfo?<Redirect to='/home' />:null }
+        <i className="fa fa-user-circle fa-3x"></i>
+        <div className="login-form">
+          { this.props.loginInfo.tokenInfo?<Redirect to='/home' />:null }
           <InputItem
             {...getFieldProps('username', {
               initialValue: initialAccount,
@@ -113,7 +115,9 @@ import { Redirect } from 'react-router-dom';
             placeholder="请输入密码"
             error={getFieldError('password')}
           >密码</InputItem>
-          <Button className="loginBtn" onClick={this.handleLogin}>登录</Button>
+          <Button className="loginBtn" type="primary" inline onClick={this.handleLogin}>登录</Button>
+        </div>
+
   
        </div>
     );
